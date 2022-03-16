@@ -67,9 +67,11 @@ body{
 .input-box{
     display: flex;
     flex-direction: column;
+}
+ 
+.input-box> div{
     margin-bottom: 2rem;
 }
-
 
 ul {
     list-style: none;
