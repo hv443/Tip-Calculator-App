@@ -75,6 +75,7 @@ ul li{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -225,6 +226,7 @@ li:nth-child(6)  input::placeholder{
 
     .input-box{
         padding:.5rem;
+        margin-bottom: 0;
     }
     .input-box ul{
         grid-template-columns: repeat(3,1fr);
