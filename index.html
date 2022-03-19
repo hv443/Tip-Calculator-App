@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <script src="script.js"></script>
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,92 +26,59 @@
 <body>
 
   <main>
+
     <div class="container">
 
-      <p class="splitter">SPLI <br>TTER</p>
+      <P class="splitter">
+        SPLI <br>TTER
+      </P>
 
       <div class="calculator">
 
         <div class="input-box">
+
           <div class="bill">
-
-            <label for=" Bill">
-              <p>
-                Bill
-              </p>
-            </label>
-            <input type="text" class="amount" name="" id="amount">
-
-
+            <label for="">Bill</label>
+            <input type="text" id="cal_bill" placeholder="0">
           </div>
 
-
-          <div class="tips">
-            <label for="tips">
-              <p>
-                Select Tip %
-              </p>
-            </label>
+          <div class="tip">
+            <label for="">Select Tip %</label>
             <ul>
-              <li>5%</li>
-              <li>10%</li>
-              <li>15%</li>
-              <li>25%</li>
-              <li>50%</li>
-              <li>Custom</li>
+              <li><input type="submit" id="cal_5"></li>
+              <li><input type="submit" id="cal_10" value=10%></li>
+              <li><input type="submit" active id="cal_15" value=15%></li>
+              <li><input type="submit" id="cal_25" value=25%></li>
+              <li><input type="submit" id="cal_50" value=50%></li>
+              <li><input type="text" id="cal_custom" placeholder="Custom"></li>
             </ul>
-
           </div>
 
-          <div class="noofpeople">
-
-            <label class="no-ofpeople" for="no. of people">
-              <p> Number of People </p>
-              <p>can't be zero</p>
+          <div class="people">
+            <label class="person-label">
+              <p>Number of People</p>
+              <p class="error">Can't be zero</p>
             </label>
-            <input type="text" class="people" id="people">
-
+            <input type="text" id="cal_people" placeholder="0">
           </div>
 
         </div>
 
+
         <div class="result-box">
 
-          <div class="result">
-
-            <div class="tip-amount">
-              <p>
-                <strong>
-                  Tip Amount
-                </strong>
-                / person
-              </p>
-
-              <h1>
-                $0.00
-              </h1>
-
-            </div>
-
-
-            <div class="total-people">
-              <p>
-                <strong>
-                  Total
-                </strong>
-                / person
-              </p>
-              <h1>
-                $0.00
-              </h1>
-            </div>
-
+          <div class="tip-amount">
+            <p><strong>Tip Amount</strong><br>/person</p>
+            <h1 id="tip_amount">$0.00</h1>
           </div>
 
-          <div class="button">
+          <div class="total-tip">
+            <p><strong>Total</strong><br>/person</p>
+            <h1 id="total">$0.00</h1>
+          </div>
 
-            <button class="reset" id="reset">RESET</button>
-
+          <div class="reset-button">
+            <button id="reset" type="reset">RESET</button>
           </div>
 
         </div>
@@ -120,11 +87,12 @@
 
     </div>
 
-
   </main>
+
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/hv443">hv443</a>.
   </div>
 </body>
 
