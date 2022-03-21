@@ -86,7 +86,11 @@ function restart(){
   peopleInput.value=1;
   tipIndividual.innerHTML= "$"+(0.00).toFixed(2);
   tipTotal.innerHTML= "$"+(0.00).toFixed(2);
-
+ 
+    tips.forEach(function(val){
+      val.classList.remove("active")
+    })
+    
 }
 
 
