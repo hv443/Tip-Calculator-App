@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <script src="script.js"></script>
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -23,7 +23,7 @@
   </style>
 </head>
 
-<body>
+<body onload="restart()">
 
   <main>
 
@@ -39,18 +39,18 @@
 
           <div class="bill">
             <label for="">Bill</label>
-            <input type="text" id="cal_bill" placeholder="0">
+            <input type="number" id="cal_bill" placeholder="0">
           </div>
 
           <div class="tip">
             <label for="">Select Tip %</label>
-            <ul>
-              <li><input type="submit" id="cal_5" value="5%"></li>
-              <li><input type="submit" id="cal_10" value=10%></li>
-              <li><input type="submit" active id="cal_15" value=15%></li>
-              <li><input type="submit" id="cal_25" value=25%></li>
-              <li><input type="submit" id="cal_50" value=50%></li>
-              <li><input type="text" id="cal_custom" placeholder="Custom"></li>
+            <ul id="tips">
+              <li><input type="submit" id="cal_5" name="tip" value="5%"></li>
+              <li><input type="submit" id="cal_10" name="tip" value=10%></li>
+              <li><input type="submit" id="cal_15" name="tip" class="active" value=15%></li>
+              <li><input type="submit" id="cal_25" name="tip" value=25%></li>
+              <li><input type="submit" id="cal_50" name="tip" value=50%></li>
+              <li><input type="text" name="tip" id="cal_custom" placeholder="Custom"></li>
             </ul>
           </div>
 
@@ -59,7 +59,7 @@
               <p>Number of People</p>
               <p class="error">Can't be zero</p>
             </label>
-            <input type="text" id="cal_people" placeholder="0">
+            <input type="number" id="cal_people" placeholder="0">
           </div>
 
         </div>
@@ -94,6 +94,10 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/hv443">hv443</a>.
   </div>
+
+  <script src="script.js"></script>
+
 </body>
+
 
 </html>

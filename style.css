@@ -38,6 +38,17 @@ body{
     color: var(--Dark-grayish-cyan);
 }
 
+
+/* javacsript */
+.active{
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
+}
+
+
+
+
+
 .container{
     display: flex;
     align-items: center;
@@ -89,8 +100,10 @@ input{
     font-size: 18px;
     font-weight: 700;
     font-family: Space Mono;
+    -moz-appearance:textfield;
 }
-
+ 
+ 
 .bill,.tip{
     margin-bottom: 1.5rem;
 }
@@ -120,6 +133,7 @@ input{
 }
 
 
+
 .tip ul{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -138,9 +152,6 @@ li input{
 li input:hover{
     background-color: var(--Light-grayish-cyan);
     color: var(--Very-dark-cyan);
-}
-li input:active{
-    background-color: var(--Strong-cyan);
 }
 
 li:nth-child(6) input{
@@ -164,6 +175,7 @@ li:nth-child(6)  input::placeholder{
     color: red;
     display: none;
 }
+
 
 
 .result-box{
@@ -231,6 +243,7 @@ li:nth-child(6)  input::placeholder{
     .input-box ul{
         grid-template-columns: repeat(3,1fr);
     }
+   
 
     .result-box{
         height: 100%;
