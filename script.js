@@ -9,7 +9,7 @@ const error = document.querySelector(".error");
 
 
 peopleInput.value = 1;
-billInput.value = null;
+billInput.value = 0;
 tipIndividual.innerHTML = "$" +(0.00).toFixed(2);
 tipTotal.innerHTML = "$" +(0.00).toFixed(2);
 
@@ -17,7 +17,7 @@ billInput.addEventListener('input' , billInputfn);
 peopleInput.addEventListener('input', peopleInputfn);
 custom.addEventListener('click',customTip );
 
-billvalue = null;
+billvalue = 0;
 tipvalue = 0.15;
 peoplevalue = 1;
 
