@@ -86,3 +86,4 @@ function restart() {
 
 
 reset.addEventListener('click', restart)
+document.onload(restart())
