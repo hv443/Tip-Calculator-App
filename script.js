@@ -10,12 +10,11 @@ const error = document.querySelector(".error");
 
 peopleInput.value = 1;
 billInput.value = 0;
-tipIndividual.innerHTML = "$" +(0.00).toFixed(2);
-tipTotal.innerHTML = "$" +(0.00).toFixed(2);
+tipIndividual.innerHTML = "$" + (0.00).toFixed(2);
+tipTotal.innerHTML = "$" + (0.00).toFixed(2);
 
-billInput.addEventListener('input' , billInputfn);
+billInput.addEventListener('input', billInputfn);
 peopleInput.addEventListener('input', peopleInputfn);
-custom.addEventListener('click',customTip );
 
 billvalue = 0;
 tipvalue = 0.15;
@@ -23,75 +22,66 @@ peoplevalue = 1;
 
 
 
-function billInputfn(){
+function billInputfn() {
   billvalue = billInput.value
   tipcalculate()
 };
 
 
-function peopleInputfn(){
+function peopleInputfn() {
   peoplevalue = peopleInput.value;
   tipcalculate()
 };
 
 
 
-  
-tips.forEach(function(val){
+
+tips.forEach(function (val) {
   val.addEventListener('click', tip)
 })
 
-function tip(event){
-tips.forEach(function(val){
-  
-  if(event.target.value === val.value){
-  val.classList.add("active")
+function tip(event) {
+  tips.forEach(function (val) {
 
-  tipvalue = parseFloat(val.value)/100;
+    if (event.target.value === val.value) {
+      val.classList.add("active")
 
-  }
-  else{
-    val.classList.remove("active")
-  }
-})  
-tipcalculate();
-}
+      tipvalue = parseFloat(val.value) / 100;
 
-
-
-function customTip(){
-  customtip = parseFloat(custom.value)/100;
+    }
+    else {
+      val.classList.remove("active")
+    }
+  })
   tipcalculate();
 }
 
 
-function tipcalculate(){
 
-  if(peoplevalue>0){
-    tipIndividual.innerHTML = "$" + ((billvalue*tipvalue)/peopleInput.value).toFixed(2);
-    tipTotal.innerHTML = "$" + (billvalue/peopleInput.value).toFixed(2);
+
+
+function tipcalculate() {
+
+  if (peoplevalue > 0) {
+    tipIndividual.innerHTML = "$" + ((billvalue * tipvalue) / peopleInput.value).toFixed(2);
+    tipTotal.innerHTML = "$" + (billvalue / peopleInput.value).toFixed(2);
     error.style.display = "none";
-    peopleInput.style.outlineColor= 'hsl(172, 67%, 45%)';
-}
-  else{
-  tipIndividual.innerHTML = "$" +(0.00).toFixed(2);
-  tipTotal.innerHTML = "$" +(0.00).toFixed(2);
-  error.style.display = "flex";
-  peopleInput.style.outlineColor= 'red';
+    peopleInput.style.outlineColor = 'hsl(172, 67%, 45%)';
+  }
+  else {
+    tipIndividual.innerHTML = "$" + (0.00).toFixed(2);
+    tipTotal.innerHTML = "$" + (0.00).toFixed(2);
+    error.style.display = "flex";
+    peopleInput.style.outlineColor = 'red';
   }
 }
 
-function restart(){
-  custom.value =null;
-  billInput.value=0;
-  peopleInput.value=1;
-  tipIndividual.innerHTML= "$"+(0.00).toFixed(2);
-  tipTotal.innerHTML= "$"+(0.00).toFixed(2);
-  
-    tips.forEach((val) => {
-        val.classList.remove("active");
-      })
-    
+function restart() {
+  custom.value = null;
+  billInput.value = 0;
+  peopleInput.value = 1;
+  tipIndividual.innerHTML = "$" + (0.00).toFixed(2);
+  tipTotal.innerHTML = "$" + (0.00).toFixed(2);
 }
 
 
